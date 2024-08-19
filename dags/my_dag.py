@@ -20,7 +20,7 @@ dag = DAG(
     'example_dag',
     default_args=default_args,
     description='A simple tutorial DAG',
-    schedule_interval=timedelta(days=1),
+    schedule_interval='*/3 * * * *',  # Run every 3 minutes
 )
 
 run_script = PythonOperator(
